@@ -1,10 +1,14 @@
+.App {
+  /* background-color: #bdc4be67; */
+  background-image: url("/Users/codeyourfuture/Documents/musicRequest/client/public/music bg3.png");
+}
 .form-container {
   max-width: 400px;
   margin: 20px auto;
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #252323;
   border-radius: 10px;
-  background-color: #82938171;
+  background-color: #424d4271;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -38,12 +42,12 @@ button {
 }
 
 button:hover {
-  background-color: #075730;
+  background-color: #052113;
 }
 
 h1 {
   text-align: center;
-  color: #097839ee;
+  color: #118041ee;
 }
 
 h2 {
