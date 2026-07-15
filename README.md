@@ -70,7 +70,7 @@ musicRequest/
 ### Clone the repository
 
 ```bash
-git clone https://github.com/JanefrancessC/musicRequest.git
+git clone https://github.com/JanefrancessC/Music-Request-App.git
 
 cd musicRequest
 ```
