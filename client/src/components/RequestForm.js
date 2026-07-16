@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import axios from "axios";
 import "../styles.css";
 
+const SERVER_URL =
+  `${process.env.REACT_APP_API_URL}/twilio/sms` ||
+  `${process.env.RENDER_APP_API_URL}/twilio/sms`;
+
 const RequestForm = () => {
   const [songName, setSongName] = useState("");
   const [artistName, setArtistName] = useState("");
@@ -13,7 +17,7 @@ const RequestForm = () => {
     setMessage("");
 
     try {
-      const response = await axios.post("http://localhost:3001/twilio/sms", {
+      const response = await axios.post(SERVER_URL, {
         songName,
         artistName,
         userPhone,
@@ -26,7 +30,19 @@ const RequestForm = () => {
         setMessage("");
       }, 5000);
     } catch (error) {
-      setMessage(`An error occurred. Please try again.`);
+      // setMessage(`An error occurred. Please try again.`);
+      console.error("Request failed:", {
+        message: error.message,
+        status: error.response?.status,
+        data: error.response?.data,
+      });
+
+      setMessage(
+        error.response?.data?.message ||
+          error.response?.data?.error ||
+          error.message ||
+          "An error occurred. Please try again.",
+      );
     }
   };
 
