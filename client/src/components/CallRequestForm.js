@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import axios from "axios";
 import "../styles.css";
 
-const SERVER_URL = "https://music-request-app.onrender.com/twilio/call";
-// const SERVER_URL = `http://localhost:3001/twilio/call`;
+const SERVER_URL =
+  `${process.env.REACT_APP_API_URL}/twilio/call` ||
+  `${process.env.RENDER_APP_API_URL}/twilio/call`;
 
 const CallRequestForm = () => {
   const [songName, setSongName] = useState("");

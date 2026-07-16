@@ -1,6 +1,6 @@
 # 🎵 MusicRequest App
 
-A full-stack music request application that allows users to search for songs using the Spotify Web API and receive confirmations via SMS or automated voice calls using Twilio.
+A full-stack music request application that allows users to search for songs using the Spotify Web API and receive confirmations via SMS using Twilio.
 
 The project demonstrates third-party API integration, RESTful backend development, asynchronous programming, and service-oriented architecture using Node.js and Express.
 

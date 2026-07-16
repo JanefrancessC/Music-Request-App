@@ -9,17 +9,6 @@ const port = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json());
 
-// app.use((req, res, next) => {
-//   console.log("Incoming request:", {
-//     method: req.method,
-//     path: req.path,
-//     body: req.body,
-//     origin: req.headers.origin,
-//   });
-
-//   next();
-// });
-
 app.get("/", (req, res) => {
   res.json({
     status: "ok",
