@@ -1,6 +1,6 @@
 .App {
   /* background-color: #bdc4be67; */
-  background-image: url("public/music bg3.png");
+  background-image: url("./assets/music-bg3.png");
 }
 .form-container {
   max-width: 400px;
