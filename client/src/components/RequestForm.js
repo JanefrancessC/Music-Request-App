@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import "../styles.css";
 
-const SERVER_URL =
-  `${process.env.REACT_APP_API_URL}/twilio/sms` ||
-  `${process.env.RENDER_APP_API_URL}/twilio/sms`;
+const API_URL = `${process.env.REACT_APP_API_URL}` || `http://localhost:3001`;
+const SERVER_URL = `${API_URL}/twilio/sms`;
 
 const RequestForm = () => {
   const [songName, setSongName] = useState("");
